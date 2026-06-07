@@ -20,9 +20,8 @@
     "start": "node dist/server/node-build.mjs",
     "server": "nodemon server.js",
     "dev": "vite",
-    "build": "npm run build:client && npm run build:server",
+    "build": "vite build",
     "build:client": "vite build",
-    "build:server": "vite build --config vite.config.server.ts",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc"
