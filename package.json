@@ -25,7 +25,11 @@
     "build:server": "vite build --config vite.config.server.ts",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "frontend" :"npm run dev",
+    "backend" : "nodemon server/server.js",
+    "go":"concurrently -n \"frontend, backend\" -c \"bgblue, bgyellow\" \"npm run frontend\" \"npm run backend\" "
+
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
@@ -39,6 +43,7 @@
     "bcrypt": "^6.0.0",
     "bootstrap": "^5.3.8",
     "cloudinary": "^1.41.3",
+    "concurrently": "^10.0.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
