@@ -26,10 +26,6 @@
     "test": "vitest --run",
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
-    "frontend" :"npm run dev",
-    "backend" : "node server/server.js",
-    "go":"concurrently -n \"frontend, backend\" -c \"bgblue, bgyellow\" \"npm run frontend\" \"npm run backend\" "
-
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
