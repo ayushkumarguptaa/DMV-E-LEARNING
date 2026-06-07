@@ -18,7 +18,7 @@ export default function InstructorDashboard() {
     const fetchDashboardData = async () => {
       try {
         const res = await axios.get(
-          "https://dmv-e-learning-1.onrender.com/instructor/total-count",
+          "http://localhost:3000/instructor/total-count",
           { withCredentials: true }
         );
 

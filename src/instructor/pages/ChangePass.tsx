@@ -53,7 +53,7 @@ export default function ChangePassword() {
     setLoading(true);
 
     const res = await axios.put(
-      "https://dmv-e-learning-1.onrender.com/instructor/change-password",
+      "http://localhost:3000/instructor/change-password",
       {
         currentPassword: form.currentPassword,
         newPassword: form.newPassword,

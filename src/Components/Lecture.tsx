@@ -29,7 +29,7 @@ export default function UserCourseLectures() {
   const fetchCourseDescription = async () => {
     try {
       const res = await axios.get(
-        "https://dmv-e-learning-1.onrender.com/user/get-courses"
+        "http://localhost:3000/user/get-courses"
       );
 
       const course = res.data.data.find(
@@ -53,7 +53,7 @@ export default function UserCourseLectures() {
   const fetchUserRating = async (lectureId: number) => {
     try {
       const res = await axios.get(
-        `https://dmv-e-learning-1.onrender.com/user/lecture/rating/${lectureId}`,
+        `http://localhost:3000/user/lecture/rating/${lectureId}`,
         { withCredentials: true }
       );
 
@@ -67,7 +67,7 @@ export default function UserCourseLectures() {
     const fetchLectures = async () => {
       try {
         const res = await axios.get(
-          `https://dmv-e-learning-1.onrender.com/user/lectures/${courseId}`,
+          `http://localhost:3000/user/lectures/${courseId}`,
           { withCredentials: true }
         );
 
@@ -95,7 +95,7 @@ export default function UserCourseLectures() {
       setSubmitting(true);
 
       await axios.post(
-        "https://dmv-e-learning-1.onrender.com/user/lecture/rate",
+        "http://localhost:3000/user/lecture/rate",
         {
           lecture_id: activeLecture.id,
           rating,

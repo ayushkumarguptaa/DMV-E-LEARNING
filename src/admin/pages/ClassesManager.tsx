@@ -29,7 +29,7 @@ export default function AdminClasses() {
   const fetchClasses = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("https://dmv-e-learning-1.onrender.com/admin/classes");
+      const res = await axios.get("http://localhost:3000/admin/classes");
 
       /*
         Backend response:
@@ -61,7 +61,7 @@ export default function AdminClasses() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`https://dmv-e-learning-1.onrender.com/admin/deleteclass/${id}`);
+      await axios.delete(`http://localhost:3000/admin/deleteclass/${id}`);
       // Remove deleted class from UI
       setClasses((prev) => prev.filter((cls) => cls.id !== id));
     } catch (error) {

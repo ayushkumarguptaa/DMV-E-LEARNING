@@ -48,7 +48,7 @@ export default function QuizPage() {
 
 
   useEffect(() => {
-    fetch(`https://dmv-e-learning-1.onrender.com/user/quiz/${quizId}/start`, {
+    fetch(`http://localhost:3000/user/quiz/${quizId}/start`, {
       credentials: "include",
     })
       .then((res) => res.json())
@@ -126,7 +126,7 @@ export default function QuizPage() {
     setIsSubmitting(true);
 
     try {
-      const res = await fetch("https://dmv-e-learning-1.onrender.com/user/quiz/submit", {
+      const res = await fetch("http://localhost:3000/user/quiz/submit", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },

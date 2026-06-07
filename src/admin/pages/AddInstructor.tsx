@@ -11,7 +11,7 @@ type Instructor = {
   approval_status: "pending" | "approved" | "rejected";
 };
 
-const API_URL = "https://dmv-e-learning-1.onrender.com/instructor";
+const API_URL = "http://localhost:3000/instructor";
 
 export default function InstructorApproval() {
   const [instructors, setInstructors] = useState<Instructor[]>([]);

@@ -32,7 +32,7 @@ export default function ContactUs() {
 
     try {
       await axios.post(
-        "https://dmv-e-learning-1.onrender.com/user/contact",
+        "http://localhost:3000/user/contact",
         {
           name: formData.name,
           email: formData.email,

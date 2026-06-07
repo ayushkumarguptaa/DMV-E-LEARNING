@@ -9,7 +9,7 @@ export default function QuizCards() {
   const [quizzes, setQuizzes] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch("https://dmv-e-learning-1.onrender.com/user/quizzes", {
+    fetch("http://localhost:3000/user/quizzes", {
       credentials: "include",
     })
       .then(res => res.json())

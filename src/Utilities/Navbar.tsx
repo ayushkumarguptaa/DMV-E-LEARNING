@@ -16,7 +16,7 @@ function NavScrollExample() {
     const checkLogin = async () => {
       try {
         const res = await axios.get(
-          "https://dmv-e-learning-1.onrender.com/user/check-Login",
+          "http://localhost:3000/user/check-Login",
           { withCredentials: true }
         );
 
@@ -40,7 +40,7 @@ function NavScrollExample() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "https://dmv-e-learning-1.onrender.com/user/logout",
+        "http://localhost:3000/user/logout",
         {},
         { withCredentials: true }
       );

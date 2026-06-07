@@ -12,17 +12,17 @@ export default function Register() {
 
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const submit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const submit = async (e) => {
     e.preventDefault();
     setLoading(true);
 
     try {
       await axios.post(
-        "https://dmv-e-learning-1.onrender.com/instructor/register",
+        "http://localhost:3000/instructor/register",
         form,
         {
           withCredentials: true,

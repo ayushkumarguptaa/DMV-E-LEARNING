@@ -50,7 +50,7 @@ export default function About() {
   const fetchInstructor = async () => {
     try {
       const res = await axios.get(
-        "https://dmv-e-learning-1.onrender.com/instructor/instructor-details",
+        "http://localhost:3000/instructor/instructor-details",
         { withCredentials: true }
       );
       setInstructor(res.data.instructor);
@@ -68,7 +68,7 @@ export default function About() {
   const handleSave = async () => {
     try {
       const res = await axios.put(
-        "https://dmv-e-learning-1.onrender.com/instructor/update-profile",
+        "http://localhost:3000/instructor/update-profile",
         formData,
         { withCredentials: true }
       );

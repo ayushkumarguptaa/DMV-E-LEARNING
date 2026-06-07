@@ -35,7 +35,7 @@ const Signup = () => {
       setLoading(true);
 
       await axios.post(
-        "https://dmv-e-learning-1.onrender.com/user/signup",
+        "http://localhost:3000/user/signup",
         formData,
         { withCredentials: true }
       );

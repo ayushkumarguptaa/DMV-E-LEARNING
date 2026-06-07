@@ -18,7 +18,7 @@ export default function UploadPdf() {
   const fetchClass = async () => {
     try {
       const res = await axios.get(
-        `https://dmv-e-learning-1.onrender.com/instructor/class/${id}`
+        `http://localhost:3000/instructor/class/${id}`
       );
       setCls(res.data.data);
     } catch (error) {
@@ -44,7 +44,7 @@ export default function UploadPdf() {
       formData.append("pdf", pdfFile);
 
       await axios.post(
-        `https://dmv-e-learning-1.onrender.com/instructor/upload-pdf/${cls.id}`,
+        `http://localhost:3000/instructor/upload-pdf/${cls.id}`,
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

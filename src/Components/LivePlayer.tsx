@@ -14,7 +14,7 @@ export default function LivePlayer({ classId }: { classId: number }) {
       fluid: true,
       sources: [
         {
-          src: `https://dmv-e-learning-1.onrender.com/live/class_${classId}.flv`,
+          src: `http://localhost:8000/live/class_${classId}.flv`,
           type: "video/x-flv"
         }
       ]

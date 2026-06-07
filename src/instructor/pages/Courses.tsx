@@ -45,7 +45,7 @@ const AddCourse = () => {
   const fetchCourses = async () => {
     try {
       const res = await axios.get(
-        "https://dmv-e-learning-1.onrender.com/instructor/getcourses",
+        "http://localhost:3000/instructor/getcourses",
         { withCredentials: true }
       );
 
@@ -124,7 +124,7 @@ const AddCourse = () => {
 
     try {
       await axios.delete(
-        `https://dmv-e-learning-1.onrender.com/instructor/deletecourse/${id}`,
+        `http://localhost:3000/instructor/deletecourse/${id}`,
         { withCredentials: true }
       );
       fetchCourses();
@@ -164,14 +164,14 @@ const AddCourse = () => {
 
       if (editId) {
         await axios.put(
-          `https://dmv-e-learning-1.onrender.com/instructor/course/${editId}`,
+          `http://localhost:3000/instructor/course/${editId}`,
           data,
           { withCredentials: true }
         );
         alert("Course updated successfully");
       } else {
         await axios.post(
-          "https://dmv-e-learning-1.onrender.com/instructor/addcourse",
+          "http://localhost:3000/instructor/addcourse",
           data,
           { withCredentials: true }
         );
