@@ -27,7 +27,7 @@
     "format.fix": "prettier --write .",
     "typecheck": "tsc",
     "frontend" :"npm run dev",
-    "backend" : "nodemon server/server.js",
+    "backend" : "node server/server.js",
     "go":"concurrently -n \"frontend, backend\" -c \"bgblue, bgyellow\" \"npm run frontend\" \"npm run backend\" "
 
   },
