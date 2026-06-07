@@ -61,7 +61,7 @@ export default function CoursePage() {
   const checkEnrollment = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/user/is-enrolled/${courseId}`,
+        `https://dmv-e-learning-1.onrender.com/user/is-enrolled/${courseId}`,
         { withCredentials: true } // 🔐 send auth cookie / token
       );
 
@@ -84,7 +84,7 @@ export default function CoursePage() {
     const fetchCourse = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/user/courses/${courseId}`
+          `https://dmv-e-learning-1.onrender.com/user/courses/${courseId}`
         );
         setCourse(res.data.data);
       } catch {
@@ -103,7 +103,7 @@ export default function CoursePage() {
     const fetchTopEnrolledCourses = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/user/courses/top-enrolled"
+          "https://dmv-e-learning-1.onrender.com/user/courses/top-enrolled"
         );
 
         const filtered = res.data.data.filter(
@@ -127,7 +127,7 @@ setTopCourses(filtered.length ? filtered : res.data.data);
     const fetchMoreCourses = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/user/courses/top"
+          "https://dmv-e-learning-1.onrender.com/user/courses/top"
         );
 
         const filtered = res.data.data.filter(
@@ -154,7 +154,7 @@ setTopCourses(filtered.length ? filtered : res.data.data);
       }
 
       const res = await axios.post(
-        "http://localhost:3000/user/enroll",
+        "https://dmv-e-learning-1.onrender.com/user/enroll",
         { course_id: courseId },
         { withCredentials: true }
       );
@@ -176,7 +176,7 @@ setTopCourses(filtered.length ? filtered : res.data.data);
         order_id: order.id,
         handler: async function (response:any) {
   const res = await axios.post(
-    "http://localhost:3000/user/enroll/verify-payment",
+    "https://dmv-e-learning-1.onrender.com/user/enroll/verify-payment",
     {
       razorpay_order_id: response.razorpay_order_id,
       razorpay_payment_id: response.razorpay_payment_id,

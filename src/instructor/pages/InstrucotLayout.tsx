@@ -13,7 +13,7 @@ export default function InstructorLayout() {
   useEffect(() => {
     const checkLoginStatus = async () => {
       try {
-        await axios.get("http://localhost:3000/instructor/me", {
+        await axios.get("https://dmv-e-learning-1.onrender.com/instructor/me", {
           withCredentials: true,
         });
         setIsLoggedIn(true);
@@ -31,7 +31,7 @@ export default function InstructorLayout() {
   const handleLogout = async () => {
     try {
       await axios.post(
-        "http://localhost:3000/instructor/ins-logout",
+        "https://dmv-e-learning-1.onrender.com/instructor/ins-logout",
         {},
         { withCredentials: true }
       );

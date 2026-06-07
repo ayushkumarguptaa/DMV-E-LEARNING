@@ -32,7 +32,7 @@ export default function ClassesPage() {
   const fetchClasses = async () => {
   try {
     const res = await axios.get(
-      "http://localhost:3000/user/enrolled-courses",
+      "https://dmv-e-learning-1.onrender.com/user/enrolled-courses",
       { withCredentials: true }
     );
 

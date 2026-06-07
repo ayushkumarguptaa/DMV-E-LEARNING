@@ -17,7 +17,7 @@ type CourseClass = {
   category: "Data Science" | "Web" | "Design";
   level: "Beginner" | "Intermediate" | "Advanced";
   price: "Free" | "Paid";
-  amount: number;          // 🔥 remove optional
+  amount: number; 
   language: "English" | "Hindi";
 };
 
@@ -49,7 +49,7 @@ export default function ClassesManager() {
   const fetchClasses = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/instructor/getclasses",
+        "https://dmv-e-learning-1.onrender.com/instructor/getclasses",
         { withCredentials: true }
       );
       setClasses(res.data.data);
@@ -127,7 +127,7 @@ export default function ClassesManager() {
     if (editIndex !== null && classes[editIndex].id) {
       // EDIT API
       await axios.put(
-        `http://localhost:3000/instructor/edit-class/${classes[editIndex].id}`,
+        `https://dmv-e-learning-1.onrender.com/instructor/edit-class/${classes[editIndex].id}`,
         data,
         {
           withCredentials: true,
@@ -137,7 +137,7 @@ export default function ClassesManager() {
     } else {
       // ADD API
       await axios.post(
-        "http://localhost:3000/instructor/addclass",
+        "https://dmv-e-learning-1.onrender.com/instructor/addclass",
         data,
         {
           withCredentials: true,
@@ -160,7 +160,7 @@ export default function ClassesManager() {
   const deleteClass = async (id?: number) => {
     if (!id) return;
     await axios.delete(
-      `http://localhost:3000/instructor/deleteclass/${id}`,
+      `https://dmv-e-learning-1.onrender.com/instructor/deleteclass/${id}`,
       { withCredentials: true }
     );
     fetchClasses();

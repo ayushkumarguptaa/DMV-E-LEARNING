@@ -21,7 +21,7 @@ export default function CoursesList() {
   if (!window.confirm("Are you sure you want to delete this course?")) return;
 
   try {
-    await axios.delete(`http://localhost:3000/admin/courses/${id}`);
+    await axios.delete(`https://dmv-e-learning-1.onrender.com/admin/courses/${id}`);
     // Remove deleted course from UI without refetching
     setCourses((prev) => prev.filter((course) => course.id !== id));
   } catch (error) {
@@ -35,7 +35,7 @@ export default function CoursesList() {
   const fetchCourses = async () => {
     try {
       setLoading(true);
-      const res = await axios.get("http://localhost:3000/admin/courses");
+      const res = await axios.get("https://dmv-e-learning-1.onrender.com/admin/courses");
 
       /*
         Your backend response is:

@@ -21,7 +21,7 @@ const TopCourses = () => {
     const fetchTopCourses = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/user/courses/top"
+          "https://dmv-e-learning-1.onrender.com/user/courses/top"
         );
 
         setCourses(res.data.data); // 👈 backend should return { data: [] }

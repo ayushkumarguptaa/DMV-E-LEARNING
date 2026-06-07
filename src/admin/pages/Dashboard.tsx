@@ -41,7 +41,7 @@ const StudentDashboard = () => {
   const fetchTotalRevenue = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/admin/total-enrollment-amount"
+        "https://dmv-e-learning-1.onrender.com/admin/total-enrollment-amount"
       );
 
       setTotalRevenue(res.data.totalAmount);
@@ -58,7 +58,7 @@ const StudentDashboard = () => {
   const fetchEnrollments = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/admin/enrollments/details"
+        "https://dmv-e-learning-1.onrender.com/admin/enrollments/details"
       );
       console.log(res.data.data)
       setStuden(res.data.data); // 👈 API DATA
@@ -76,7 +76,7 @@ const StudentDashboard = () => {
     const fetchTotalStudents = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/admin/total-students"
+          "https://dmv-e-learning-1.onrender.com/admin/total-students"
         );
         setTotalStudents(res.data.totalClients);
       } catch (error) {

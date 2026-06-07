@@ -19,7 +19,7 @@ function Home(){
 
   useEffect(() => {
   axios
-    .get("http://localhost:3000/user/ratings/count")
+    .get("https://dmv-e-learning-1.onrender.com/user/ratings/count")
     .then(res => {
       console.log("Ratings:", res.data);
       setTotalRatings(res.data.total_ratings);
@@ -31,7 +31,7 @@ function Home(){
 
   useEffect(() => {
   axios
-    .get("http://localhost:3000/user/enrolled-users/count")
+    .get("https://dmv-e-learning-1.onrender.com/user/enrolled-users/count")
     .then(res => setTotalStudents(res.data.totalUsers))
     .catch(err => console.error(err));
 }, []);
@@ -41,7 +41,7 @@ function Home(){
   useEffect(() => {
   const fetchCourses = async () => {
     try {
-      const res = await axios.get('http://localhost:3000/user/get-courses')
+      const res = await axios.get('https://dmv-e-learning-1.onrender.com/user/get-courses')
 
       console.log(res.data)
       setTotalCourses(res.data.count)

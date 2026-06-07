@@ -29,7 +29,7 @@ const Courses = () => {
     const fetchCourses = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/user/get-courses"   // backend API
+          "https://dmv-e-learning-1.onrender.com/user/get-courses"   // backend API
         );
         setCourses(res.data.courses);  // FIXED
       } catch (error) {

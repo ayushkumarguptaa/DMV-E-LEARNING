@@ -8,7 +8,7 @@ export default function HomePopup() {
   useEffect(() => {
     const fetchPopup = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/admin/popup");
+        const res = await axios.get("https://dmv-e-learning-1.onrender.com/admin/popup");
 
         if (res.data?.message) {
           setMessage(res.data.message);

@@ -51,7 +51,7 @@ export default function QuizManager() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/admin/quiz/courses")
+    fetch("https://dmv-e-learning-1.onrender.com/admin/quiz/courses")
       .then((res) => res.json())
       .then((json) => {
         if (json.success) {
@@ -135,7 +135,7 @@ export default function QuizManager() {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/admin/save-ai-quiz", {
+      const res = await fetch("https://dmv-e-learning-1.onrender.com/admin/save-ai-quiz", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -199,7 +199,7 @@ export default function QuizManager() {
   setLoading(true);
 
   try {
-    const res = await fetch("http://localhost:3000/admin/generate-quiz", {
+    const res = await fetch("https://dmv-e-learning-1.onrender.com/admin/generate-quiz", {
       method: "POST",
       body: formData,
     });

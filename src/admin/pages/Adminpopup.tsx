@@ -15,7 +15,7 @@ export default function Adminpopup() {
 
   const fetchPopups = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/admin/popup/all");
+      const res = await axios.get("https://dmv-e-learning-1.onrender.com/admin/popup/all");
       setPopups(res.data.data);
     } catch (error) {
       console.error("Fetch popups error:", error);
@@ -34,7 +34,7 @@ export default function Adminpopup() {
 
     try {
       setLoading(true);
-      await axios.post("http://localhost:3000/admin/popup", { message });
+      await axios.post("https://dmv-e-learning-1.onrender.com/admin/popup", { message });
       setMessage("");
       fetchPopups();
     } catch (error) {
@@ -46,12 +46,12 @@ export default function Adminpopup() {
   };
 
   const activatePopup = async (id: number) => {
-    await axios.put(`http://localhost:3000/admin/popup/activate/${id}`);
+    await axios.put(`https://dmv-e-learning-1.onrender.com/admin/popup/activate/${id}`);
     fetchPopups();
   };
 
   const deactivatePopup = async (id: number) => {
-    await axios.put(`http://localhost:3000/admin/popup/deactivate/${id}`);
+    await axios.put(`https://dmv-e-learning-1.onrender.com/admin/popup/deactivate/${id}`);
     fetchPopups();
   };
 
@@ -63,7 +63,7 @@ export default function Adminpopup() {
     if (!confirmDelete) return;
 
     try {
-      await axios.delete(`http://localhost:3000/admin/popup/${id}`);
+      await axios.delete(`https://dmv-e-learning-1.onrender.com/admin/popup/${id}`);
       fetchPopups();
     } catch (error) {
       console.error("Delete popup error:", error);

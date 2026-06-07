@@ -21,7 +21,7 @@ const AttemptedQuizzes = () => {
     const fetchAttemptedQuizzes = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/user/quizzes/attempted",
+          "https://dmv-e-learning-1.onrender.com/user/quizzes/attempted",
           { withCredentials: true }
         );
 

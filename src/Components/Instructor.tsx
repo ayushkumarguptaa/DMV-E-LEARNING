@@ -26,7 +26,7 @@ const InstructorsPage = () => {
     const fetchInstructors = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:3000/admin/getinstructors"
+          "https://dmv-e-learning-1.onrender.com/admin/getinstructors"
         );
         setInstructors(res.data.data);
       } catch (error) {

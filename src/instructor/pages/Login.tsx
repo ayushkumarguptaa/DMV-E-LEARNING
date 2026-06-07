@@ -16,7 +16,7 @@ export default function InstructorLogin() {
 
     try {
       const res = await axios.post(
-        "http://localhost:3000/instructor/login",
+        "https://dmv-e-learning-1.onrender.com/instructor/login",
         { email, password },
         { withCredentials: true }
       );

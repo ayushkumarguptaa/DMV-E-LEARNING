@@ -26,7 +26,7 @@ export default function CoursePage() {
   const fetchCourseDescription = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:3000/user/get-courses"
+        "https://dmv-e-learning-1.onrender.com/user/get-courses"
       );
 
       const course = res.data.data.find(
@@ -48,7 +48,7 @@ export default function CoursePage() {
   const fetchLectures = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:3000/admin/getlectures/${courseId}`
+        `https://dmv-e-learning-1.onrender.com/admin/getlectures/${courseId}`
       );
 
       const formatted = res.data.data.map((item: any) => ({
@@ -84,7 +84,7 @@ export default function CoursePage() {
       formData.append("course_id", String(courseId));
 
       const res = await axios.post(
-        "http://localhost:3000/admin/upload-lecture",
+        "https://dmv-e-learning-1.onrender.com/admin/upload-lecture",
         formData,
         { headers: { "Content-Type": "multipart/form-data" } }
       );

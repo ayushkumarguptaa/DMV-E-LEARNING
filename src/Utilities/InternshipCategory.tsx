@@ -23,7 +23,7 @@ const InternshipCategories = () => {
   useEffect(() => {
   const fetchCourses = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/user/get-courses");
+      const res = await axios.get("https://dmv-e-learning-1.onrender.com/user/get-courses");
 
       console.log(res.data); // keep this for debugging
 

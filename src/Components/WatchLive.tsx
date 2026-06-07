@@ -5,7 +5,7 @@ import Footer from '../Utilities/Footer'
 
 const WatchLive = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const streamURL = "http://localhost:8000/live/class1/index.m3u8";
+  const streamURL = "https://dmv-e-learning-1.onrender.com/live/class1/index.m3u8";
 
   useEffect(() => {
     if (Hls.isSupported()) {
