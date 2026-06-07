@@ -25,7 +25,7 @@
     "build:server": "vite build --config vite.config.server.ts",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc",
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^7.1.0",
@@ -33,13 +33,13 @@
     "@fortawesome/free-regular-svg-icons": "^7.1.0",
     "@fortawesome/free-solid-svg-icons": "^7.1.0",
     "@fortawesome/react-fontawesome": "^3.1.1",
+    "@jitsi/react-sdk": "^1.4.4",
     "@prisma/client": "^7.2.0",
     "@tailwindcss/vite": "^4.1.18",
     "axios": "^1.13.2",
     "bcrypt": "^6.0.0",
     "bootstrap": "^5.3.8",
     "cloudinary": "^1.41.3",
-    "concurrently": "^10.0.3",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
@@ -61,7 +61,9 @@
     "react": "^19.2.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.2.0",
+    "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.10.1",
+    "react-toastify": "^11.0.5",
     "tailwindcss": "^4.1.18",
     "video.js": "^8.23.4"
   },
